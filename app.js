@@ -1,9 +1,17 @@
-const { createApp, ref } = Vue
-  createApp({
-    setup() {
-      const message = ref('Hello vue!')
-      return {
-        message
-      }
+let app = Vue.createApp({
+    data(){
+        return{
+            title:'Hello Vue JS',
+        };
     }
-  }).mount('.app')
+});
+app.mount('.app');
+
+let main_app = Vue.createApp({
+    data(){
+        return{
+            message:'Hello Saikat',
+        }
+    }
+});
+main_app.mount('#app');
