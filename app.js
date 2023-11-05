@@ -1,17 +1,25 @@
-let app = Vue.createApp({
+const app =Vue.createApp({
     data(){
         return{
-            title:'Hello Vue JS',
-        };
-    }
-});
-app.mount('.app');
-
-let main_app = Vue.createApp({
-    data(){
-        return{
-            message:'Hello Saikat',
+            userinfo:{
+                name:'saikat mondal',
+                age:23,
+                profession:'software developer',
+                github:'https://github.com/codingbysaikat',
+            },
+            count:0,
         }
+    },
+    methods:{
+        getCurrentTime(){
+            let date = new Date();
+            return date;
+        },
+        increase(){
+            this.count++;
+
+        }
+
     }
 });
-main_app.mount('#app');
+app.mount('#app')

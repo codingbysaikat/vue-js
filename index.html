@@ -7,11 +7,15 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div class="app">
-        <p>{{title}}</p>
-    </div>
     <div id="app">
-        <p>{{message}}</p>
+     <p>{{userinfo.name}}</p>
+     <p>{{userinfo.age}}</p>
+     <p>{{userinfo.profession}}</p>
+     <p>go to my <a :href="userinfo.github">github</a> </p>
+     <p>Date and Time : {{getCurrentTime()}}</p>
+     <p>count:{{count}}</p>
+     <button @click="increase()">increment</button>
+     <button @click="count--">decrement</button>
     </div>
     <script src="app.js"></script>
 </body>
